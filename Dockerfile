@@ -1,8 +1,8 @@
 FROM node:lts-alpine
 WORKDIR /app
 COPY . .
-RUN npm install
-RUN npm build
+RUN yarn install
+RUN yarn build
 
 EXPOSE 9000
-ENTRYPOINT ["npm", "deploy"]
+ENTRYPOINT ["yarn", "deploy"]
